@@ -5,7 +5,7 @@ Setup guide for WSL with Debian
 
 ### Enforce LF
 
-Most editors in the Windows environment will be able to handle LF and CRLF, but using CRLF can lead to a dirtied git repository, as files are marked changed even if the only change was the line endings. This happens quite frequently.
+Most editors in the Windows environment will be able to handle LF and CRLF (even notepad.exe can handle LF), but using CRLF with WSL can lead to a dirtied git repository, as files are marked changed even if the only change was the line endings. This happens quite frequently.
 
 This can be solved by enforcing LF.
 
