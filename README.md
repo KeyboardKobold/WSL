@@ -31,7 +31,8 @@ git config --global core.filemode false
 
 Please note you will need to take extra steps now if you want to explicitely change file mode permissions. You can do this like so:
 
+```bash
 git update-index --chmod=(+|-)x <path>
-  
+```
 
 ❗ Be sure to check inside the hidden .git folder in each repository. In most cases a file named config inside it will have set filemode = true, which overwrites your global settings.
