@@ -25,7 +25,9 @@ Some programs, when saving changes back to a file, don't honour the original fil
 
 Instead, set git to ignore all file permission changes and use the original permission instead.
 
+```bash
 git config --global core.filemode false
+```
 
 Please note you will need to take extra steps now if you want to explicitely change file mode permissions. You can do this like so:
 
