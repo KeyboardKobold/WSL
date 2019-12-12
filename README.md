@@ -1,6 +1,7 @@
 # WSL
 Setup guide for WSL with Debian
 
+## Git settings
 
 ### Enforce LF
 
@@ -13,3 +14,15 @@ git config --global core.eol lf
 
 Finally, check if changes have been applied using
 git config --global --edit
+
+### Ignore file permission changes
+
+Some programs, when saving changes back to a file, don't honour the original file permissions, or simply delete and rewrite files. These files will have the equivalent of Windows file permissions, e.g. 755. If you work with developers that don't use Windows, you do not want to push back files with new permissions of 755.
+
+Instead, set git to ignore all file permission changes and use the original permission instead.
+
+git config --global core.filemode false
+
+Please note you will need to take extra steps now if you want to explicitely change file mode permissions. You can do this like so:
+
+it update-index --chmod=(+|-)x <path>
