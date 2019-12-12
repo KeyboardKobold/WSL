@@ -9,9 +9,13 @@ Most editors in the Windows environment will be able to handle LF and CRLF, but 
 
 This can be solved by enforcing LF.
 
+```bash
+
 git config --global core.autocrlf input
+
 git config --global core.eol lf
 
+```
 Finally, check if changes have been applied using
 git config --global --edit
 
